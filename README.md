@@ -26,15 +26,15 @@
 <p>2. Instale as dependências:</p>
 festa 
 
-npm install
+    npm install
 
   <p>3. Execute a aplicação:</p>
 
 festa 
 
-npm start
+    npm start
 
-  <p>Acesse a aplicação em [http://localhost:3000](http://localhost:3000) no seu navegador.</p>
+  <p>Acesse a aplicação em (http://localhost:3000) no seu navegador.</p>
   <h2>Tecnologias Utilizadas:</h2>
   <ul>
     <li>Node.js</li>
@@ -45,4 +45,4 @@ npm start
   <h2>Contribua!</h2>
   <p>Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests para melhorar esta aplicação.</p>
   <h2>Licença</h2>
-  <p>Este projeto é licenciado sob a MIT License - veja o arquivo [LICENSE](LICENSE) para mais detalhes.</p>
+  <p>Este projeto é licenciado sob a MIT License</p>
