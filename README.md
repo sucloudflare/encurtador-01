@@ -19,11 +19,10 @@
   <h2>Executando Localmente:</h2>
 
   <p>1. Clone o repositório:</p>
-```bash
+
 
       git clone https://github.com/seu-usuario/encurtador-node.git
       
-´´´bash
 <p>2. Instale as dependências:</p>
 festa 
 
