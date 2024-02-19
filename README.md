@@ -49,4 +49,4 @@ festa
   <h2>img</h2>
   <img src='./01.png' alt=''>
   <br>
-  <img src='./02.png alt=''>
+  <img src='./02.png' alt=''>
