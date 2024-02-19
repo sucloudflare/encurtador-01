@@ -1,0 +1,85 @@
+body {
+  background: url(../images/img.jpg) no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.header {
+  padding: 3rem;
+  text-align: center;
+}
+
+.icon {
+  height: 42px;
+}
+
+.content {
+  display: flex;
+  justify-content: center !important;
+}
+
+form {
+  flex: 0 0 80%;
+  padding: 2rem;
+  border-radius: .5rem;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5)), #333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilizando o input */
+form input {
+  border: none;
+  background-color: #444;
+  color: #fff;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.25rem;
+  border: none;
+}
+
+/* Estilizando o botão */
+form button {
+  background: linear-gradient(#007bb5, #005a8d);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 35px;
+}
+
+form button:hover {
+  background: linear-gradient(#7da5b6, #4c6f80);
+}
+
+.stats {
+  text-align: center;
+}
+
+.statsBox {
+  flex: 0 0 25%;
+  padding: 2rem;
+  border-radius: .5rem;
+  text-align: center;
+  margin: .5rem;
+  background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5)), #333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.statsRow {
+  display: flex;
+  justify-content: center !important;
+}
+
+/* Adicionando estilo para links */
+a {
+  color: #00a5e7;
+}
+
+a:hover {
+  color: #00c0ff;
+}
