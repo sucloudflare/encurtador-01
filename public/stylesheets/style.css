@@ -2,19 +2,22 @@ body {
   background: url(../images/img.jpg) no-repeat center center fixed;
   background-size: cover;
   color: #fff;
-  font-family: 'Arial', sans-serif;
+  font-family: "Lato", sans-serif;
   margin: 0;
-  overflow: hidden;
+  /* Remova o overflow: hidden para permitir a rolagem */
+  /* overflow: hidden; */
   height: 100vh;
-}
-
-.header {
-  padding: 3rem;
-  text-align: center;
+  font-weight: bold;
 }
 
 .icon {
   height: 42px;
+}
+
+.header {
+  padding: 2rem;
+  text-align: center;
+  font-weight: bold;
 }
 
 .content {
@@ -27,7 +30,7 @@ form {
   padding: 2rem;
   border-radius: .5rem;
   text-align: center;
-  background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5)), #333;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), #333;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -50,6 +53,7 @@ form button {
   padding: 0.5rem 1rem;
   cursor: pointer;
   border-radius: 35px;
+  font-weight: bold;
 }
 
 form button:hover {
@@ -57,7 +61,27 @@ form button:hover {
 }
 
 .stats {
+  background-color: #1e1e1e;
   text-align: center;
+  border: 1px solid #444;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 2rem; /* Ajuste a margem conforme necessário */
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), #1e1e1e;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  transition: background 0.3s ease;
+  gap: 1rem;
+
+  /* Adicionando margem central e preenchimento pequeno */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5rem;
+}
+
+.stats:hover {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)), #1e1e1e;
+  border: 1px solid #fff;
 }
 
 .statsBox {
@@ -66,7 +90,7 @@ form button:hover {
   border-radius: .5rem;
   text-align: center;
   margin: .5rem;
-  background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5)), #333;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), #333;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -78,8 +102,80 @@ form button:hover {
 /* Adicionando estilo para links */
 a {
   color: #00a5e7;
+  font-weight: bold;
 }
 
 a:hover {
   color: #00c0ff;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), #333;
+  padding: 1rem;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 2rem; /* Ajuste a margem conforme necessário */
+}
+section{
+  background: url(../images/img.jpg) no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  /* Remova o overflow: hidden para permitir a rolagem */
+  /* overflow: hidden; */
+  height: 100vh;
+  font-weight: bold;
+}
+
+/* Estilizando a seção de formulário de contato */
+.contact-form {
+  background-color: #f8f9fa; /* Cor de fundo */
+  padding: 40px; /* Espaçamento interno */
+  border-radius: 8px; /* Borda arredondada */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  max-width: 600px; /* Largura máxima do formulário */
+  margin: 0 auto; /* Centralizar o formulário na página */
+}
+
+/* Estilizando as etiquetas dos campos */
+.contact-form label {
+  display: block; /* Cada etiqueta em uma linha */
+  margin-bottom: 8px; /* Espaçamento inferior */
+  font-weight: bold; /* Negrito */
+  color: #ffffff; /* Cor do texto */
+}
+
+/* Estilizando os campos de entrada e a área de texto */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%; /* Largura total */
+  padding: 10px; /* Espaçamento interno */
+  margin-bottom: 16px; /* Espaçamento inferior */
+  border: 1px solid #ccc; /* Borda cinza */
+  border-radius: 4px; /* Borda arredondada */
+  box-sizing: border-box; /* Garantir que o preenchimento não aumente a largura total */
+}
+
+/* Estilizando o botão de envio */
+.contact-form button {
+  background-color: #1c5591; /* Cor de fundo azul */
+  color: #fff; /* Cor do texto branco */
+  padding: 12px 20px; /* Espaçamento interno */
+  border: none; /* Sem borda */
+  border-radius: 4px; /* Borda arredondada */
+  cursor: pointer; /* Cursor apontando */
+  font-size: 16px; /* Tamanho da fonte */
+  transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
+}
+
+/* Estilizando o botão de envio no hover (quando passa o mouse) */
+.contact-form button:hover {
+  background-color: #0056b3; /* Cor de fundo azul mais escura */
 }

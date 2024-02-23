@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Encurtador</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="stylesheet" href="/stylesheets/style.css"> <!-- Adicionei esta linha -->
+  <script>
+    const code = '<%= code %>';
+    const url = '<%= url %>';
+    const hits = '<%= hits %>';
+    const updatedAt = '<%= updatedAt %>';
+    const domain = '<%= process.env.DOMAIN %>';
+    const fullUrl = domain + code;
+
+    async function countVisit() {
+      try {
+        await fetch(`/api/countVisit/${code}`, { method: 'POST' });
+      } catch (error) {
+        console.error('Erro ao contar visita:', error);
+      }
+    }
+
+    window.onload = function () {
+      document.getElementById('shortened-url').innerText = fullUrl;
+      document.getElementById('original-url').innerText = url;
+      document.getElementById('hits-count').innerText = hits;
+      document.getElementById('last-visit').innerText = updatedAt;
+      countVisit();
+    };
+  </script>
+</head>
+
+<body>
+  <header><!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="/images/web_server.png" alt="Encurtador" class="icon" />
+        Encurtador
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section">Contato</a> <!-- Alterado o caminho -->
+          </li>
+          <!-- Adicione mais itens de menu conforme necessário -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<main>
+  <div class="container">
+    <!-- Conteúdo principal -->
+    <div class="header">
+      <h1>Encurtador</h1>
+      <p>Estatísticas de acesso</p>
+    </div>
+    <div class="stats">
+      <p>
+        <b id="shortened-url"></b>
+      </p>
+      <p>Redireciona para:<br /><span id="original-url"></span></p>
+      <div class="statsRow">
+        <div class="statsBox">
+          <b id="hits-count"></b>
+          <p>Visitas</p>
+        </div>
+        <div class="statsBox">
+          <b id="last-visit"></b>
+          <p>Última Visita</p>
+        </div>
+      </div>
+      <a href="/" class="btn btn-primary">Encurtar nova URL</a>
+    </div>
+  </div>
+</main>
+<section id="section" class="contact-form">
+  <form action="/submit" method="post">
+      <label for="name">Nome:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Mensagem:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit">Enviar Mensagem</button>
+  </form>
+</section>
+  <!-- Footer -->
+  <footer class="text-center mt-5">
+    <p>&copy; 2024 Encurtador. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Bootstrap JS no final do corpo -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
